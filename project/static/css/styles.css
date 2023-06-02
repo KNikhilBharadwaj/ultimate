@@ -1,0 +1,168 @@
+
+*{
+    box-sizing:border-box;    
+    }
+    body{
+        margin:0;
+        padding:0;
+        font-family: roboto;
+    }
+    .header{
+        width:100%;
+        height: 50px;
+        background-color:#586570 ;
+        position: fixed;
+        z-index: 8 ;
+    
+    }
+    .main{
+        height: 100%;
+        margin-top: 50px;
+        padding: 10px 40px;
+        float: right;
+        width: 90%;
+    }
+    #varticalNav  {
+        height: 100%;
+        position: fixed;
+        left:0;
+        top:20px;
+        width:150px;
+        margin-top: 50px;
+        background-color:#6d2f65;
+    
+    }
+    .nav{
+        list-style-type: none;
+        padding:0;
+        margin: 0;
+    }
+    .nav li{
+        color:aliceblue;
+        border-bottom: 1px solid white;
+    }
+    .nav li a{
+        color:white;
+        display:block;
+        text-decoration: none;
+        padding: 15px;
+    }
+    .nav li a:hover{
+    background-color:#53cc0d;
+    color:#920505;
+    }  */
+    
+    
+/*     
+    
+    
+     */
+    
+        
+    *{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: roboto;
+    
+    }
+    nav{
+        background:#6d2f65 ;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+    
+        
+    }
+    label.logo{
+        color:#40eb0c;
+        font-size: 37px;
+        font-weight: bold ;
+        line-height: 70px;
+        padding: 0 60px;
+    }
+    nav ul{ 
+        float: right;
+        margin: 5px;
+    }
+    nav ul li{
+        display:inline-block;
+        line-height: 70px;
+        margin: 0 5px;
+    
+    }
+    nav ul li a{
+        color:#ebc20c;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 7px 12px;
+        border-radius: 4px;
+    }
+     a:hover{
+        background: #dd06bd;
+        color: #a10e09;
+     }
+     .checkbtn{
+        font-size: 30px;
+        color: aqua;
+        float: right;
+        margin-right:10px;
+        line-height:75px;
+        cursor: pointer;
+     }
+     #check{
+        display:none;
+     }
+     @media(max-width: 950px){
+        labe.logo{
+            font-size:30px ;
+            padding-left:50px
+    
+        }
+        nav ul li a{
+            font-size: 16px;
+    
+        }
+     }
+    @media(max-width:850px){
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width:100% ;
+            height: 100vh;
+            background: #52b8803f;
+            top:70px;
+            left:-100%;
+            transform: all.5s;
+            text-align: center;
+    
+        }
+        nav ul li{
+            display: block;
+            margin: 20px 0;
+            line-height: 30px;
+        }
+        nav ul li a{
+    
+            font-size: 20px;
+    
+        }
+        a:hover{
+            background: #ee1506;
+            color: #ebc20c;
+    
+        }
+        #check:checked ~ ul{
+            left:0;
+        }
+
+
+        
+    } 
+    

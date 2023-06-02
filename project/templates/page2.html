@@ -1,0 +1,124 @@
+{% extends 'fixednav.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>page2</title>
+	{% comment %} <link rel="stylesheet" type="text/css" href="styles1.css"> {% endcomment %}
+</head>
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css'%}">
+<h1>Invoice Entry</h1>
+
+    
+{% comment %} 
+{% if message %}
+  <div class="success-message">
+    {{ message }}
+  </div>
+{% endif %}
+
+{% if error_message %}
+  <div class="error-message">
+    {{ error_message }}
+  </div>
+{% endif %} {% endcomment %}
+
+    <form id="sh"  method="POST">
+     {% if message %}
+
+      <div class="message1">{{ message }}</div>
+    {% endif %}
+    {% csrf_token %}
+		<table>
+			<tr>
+        <th>GSTIN Number :</th>
+        <td><input type="text" id="1" name="p_gstin_number" placeholder="Enter GSTIN Number"></td>
+    </tr>
+    
+			
+			<tr>
+				<th>HSN Number :</th>
+				<td><input type="text" id="3" name="p_hsn_code" placeholder="Enter HSN Number"></td>
+			</tr>
+			<tr>
+				<th>Invoice Number :</th>
+				<td><input type="text" id="4" name="p_invoice_number" placeholder="Enter Invoice Number"></td>
+			</tr>
+			<tr>
+				<th>Invoice Date  :</th>
+				<td><input type="date" id="5" name="p_invoice_date"></td>
+			</tr>
+			<tr>
+				<th>Invoice Value :</th>
+				<td><input type="text" id="6" name="p_invoice_value" placeholder="Enter Invoice Value"></td>
+			</tr>
+      <tr>
+        <th>Paid Status:</th>
+        <td>
+            <select id="7" name="p_paid_status">
+                 <option value="">SELECT</option> 
+                <option value="done">Done</option>
+                <option value="pending">Pending</option>
+            </select>
+        </td>
+    </tr>
+    
+               <th>Quantity  :</th>
+                <td><input type="text" id="8" name="p_qty" placeholder="Enter the Quantity"></td>
+             </tr>
+            </tr>
+                 <th>Cost :</th>
+                 <td><input type="text" id="9" name="p_cost" placeholder="Enter the Cost"></td>
+            </tr>
+            </tr>
+                <th>Project Batch Code :</th>
+                <td>
+                  <select id="11" name="p_project_batch_code" required>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Financial Year:</th>
+              <td>
+                  <select id="11" name="p_financial_year">
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                  </select>
+              </td>
+          </tr>
+          
+            
+            
+            </tr>
+                <th>IGST</th>
+                <td><input type="text" id="14" name="p_igst" placeholder="Enter the GST Percentage "></td>
+             </tr>
+            </tr>
+                <th>CGST :</th>
+                <td><input type="text" id="15" name="p_cgst" placeholder="Enter the CGST"></td>
+            </tr>
+              </tr>
+                 <th>SGST :</th>
+                 <td><input type="text" id="16" name="p_sgst" placeholder="Enter the SGST"></td>
+            </tr>
+             
+           
+        </tr>
+        <!-- <th>Financial Year:</th>
+        <td><input type="Year" id="18" name="FinancialYear"></td> -->
+        
+
+    </tr>
+
+		</table>
+		<input type="submit" value="Submit">
+	</form>
+    {% endblock body %}
+</html>

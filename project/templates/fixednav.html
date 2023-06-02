@@ -1,0 +1,71 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ultimate</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}">
+
+
+	
+	{% comment %} <link rel="stylesheet" href="styles.css"> {% endcomment %}
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+ <nav>
+		<input type="checkbox"id="check">
+		<label for="check"class="checkbtn">
+	    <i class ="fas fa-bars"></i>
+		</label>
+		<label class="logo">TRACKOWORLD</label>
+
+	
+		
+		<ul>
+			<li><a href="{% url 'home' %}">Home</a></li>
+			<li><a href="{% url 'logout' %}">LOGOUT</a></li>
+			
+		</ul>
+</nav>
+	
+<!-- navigation header -
+<div class="header"></div> -->
+ <div id="varticalNav">
+	<ul class="nav">
+		<li><a href="{% url 'home' %}">Home</a></li>
+		<li><a href="{% url 'index' %}" >Vendor Form</a></li>
+		<li><a href="{% url 'page2' %}" >Invoice Entry</a></li>
+		<li><a href="{% url 'gstin' %}">GSTIN-DETAILS</a></li>
+		<li><a href="#">page4</a></li>
+		<li ><a href="#">page5</a></li> 
+	</ul>
+	</div>
+	<div class="main">
+		{% block body %}<h1>HOME PAGE</h1>{% endblock body %}
+	</div>
+		
+		
+		
+		{%comment%}
+	{% comment %} <!-- <h1>Vertical Navigation Bar</h1> -->
+	 <!-- Iframe section -->
+	 <div class="col-md-9">
+        {% comment %} <iframe id="myiframe" src="sundrycreditors.html" width="100%" height="800" frameborder="0"></iframe> {% endcomment %}
+		{% comment %} NIKHIL {% endcomment %}
+      {% comment %} </div> {% endcomment %}
+	  <!-- <div>
+		<iframe id="myiframe" src="page2.html" width="100%" height="800" frameborder="0"></iframe>
+	  </div>
+	--> 
+
+{% comment %} <script>
+	  function loadIframe(page) {
+	     document.getElementById("myiframe").src = page;
+	   }
+	 </script> {% endcomment %}
+	
+	</body>
+</html>

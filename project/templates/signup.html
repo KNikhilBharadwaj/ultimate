@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        max-width: 400px;
+        margin: 50px auto;
+      }
+      h2 {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px rgba(0,0 0,0.1);
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .link {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .link a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+      </head>
+      <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+          {% if messages %}
+          {% for message in messages %}
+          alert('{{ message }}');
+          {% endfor %}
+          {% endif %}
+        });
+      </script>
+      <body>
+        <form action="" method="post">
+          {% csrf_token %}
+          {% comment %} we are taking the input values has refferencs to a variable declaared ,to get the data from this input name  {% endcomment %}
+          <h2>Registration</h2>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>   
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password1" required>
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" name="password2" required>
+          <input type="submit" value="Register">
+          <div class="link">Already have an account? <a href="{% url 'login' %}">Login here</a></div>
+        </form>
+          
+      </body>
+    </html>
+
+
+
+
+

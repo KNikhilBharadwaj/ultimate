@@ -1,0 +1,57 @@
+{% extends 'fixednav.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  
+</head>
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles2.css'%}">
+  {% comment %} <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header> {% endcomment %}
+
+  <section id="hero">
+    <h1>Trackoworld
+      Design
+      Development </h1>
+   
+    <a href="https://www.google.com/maps/@12.8837572,77.6455297,3a,75y,276.31h,98.72t/data=!3m6!1e1!3m4!1sNGTQwtRVm2qsKxNasqffRA!2e0!7i13312!8i6656" class="btn">Location</a>
+    
+
+  </section>
+
+  <section id="features">
+    <h2>Our Features</h2>
+    <div class="feature">
+      <i class="fas fa-laptop"></i>
+      <h3>Responsive Design</h3>
+      
+    </div>
+    <div class="feature">
+      <i class="fas fa-cogs"></i>
+      <h3>Customizable</h3>
+      
+    </div>
+    <div class="feature">
+      <i class="fas fa-user"></i>
+      <h3>User-Friendly</h3>
+     
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Address: 1No, 96/1, Hosur Rd, Srinivasa Nagar,
+      Hal Layout, Singasandra, Bengaluru, Karnataka 560068.</p>
+  </footer>
+{% endblock body %}
+</html>

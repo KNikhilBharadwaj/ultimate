@@ -1,0 +1,74 @@
+{% extends 'fixednav.html' %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vendor Form</title>
+	
+	{% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css'%}"> {% endcomment %}
+
+	
+</head>
+{% block body %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles1.css'%}">
+
+<h1>Vendor Form</h1>
+{% comment %} {% if message %}
+  <div class="success-message">
+    {{ message }}
+  </div>
+{% endif %}
+
+{% if error_message %}
+  <div class="error-message">
+    {{ error_message }}
+  </div>
+{% endif %} {% endcomment %}
+<form id="sh" action="" method="POST">
+	{% if message %}
+
+	<div class="message1">{{ message }}</div>
+{% endif %}
+	{% csrf_token %}
+
+	<table>
+		<tr>
+			<th>Vendor Name:</th>
+			<td><input type="text" id="1" name="vendor_name" placeholder=" Enter the Name"></td>
+		</tr>
+		{% comment %} <tr>
+			<th>Vendor Code:</th>
+			<td><input type="text" id="2" name="Vendor_Code"></td>
+		</tr> {% endcomment %}
+		<tr>
+			<th>Vendor Address:</th>
+			<td><input type="text" id="3" name="vendor_address" placeholder=" Enter the Address"></td>
+		</tr>
+		<tr>
+			<th>GSTIN:</th>
+			<td><input type="text" id="4" name="vendor_gstin" placeholder=" Enter the GSTIN Number"></td>
+		</tr>
+		<tr>
+			<th>Contact Number:</th>
+			<td><input type="text" id="5" name="contact_number" placeholder=" Enter the Contact Number"></td>
+		</tr>
+		<tr>
+			<th>Email Id:</th>
+			<td><input type="email" id="6" name="email_id" placeholder=" Enter the Email" ></td>
+		</tr>
+	</table>
+	<input type="submit" value="Submit">
+
+</form>
+
+
+
+{% endblock body %}
+</html>
+
+
+
+
+
+
+
